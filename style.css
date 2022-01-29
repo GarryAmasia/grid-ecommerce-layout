@@ -1,0 +1,152 @@
+* {
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  /* background: red; */
+  min-height: 80vh;
+
+  /* grid(parent of all the item) */
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat (3, 1fr);
+
+  grid-template-areas:
+    "header header header"
+    "title title title"
+    "banner banner box1"
+    "banner banner box2"
+    "side-menu main main"
+    "tags main main"
+    "recent main main"
+    "footer footer footer";
+}
+
+.wrapper > * {
+  min-height: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background: navy;
+  color: white;
+  grid-area: header;
+  /* object-fit: cover; */
+}
+
+.title {
+  background: yellow;
+  grid-area: title;
+}
+
+.banner {
+  background: green;
+  grid-area: banner;
+}
+
+.box1 {
+  background: orange;
+  grid-area: box1;
+}
+
+.box2 {
+  background: pink;
+  grid-area: box2;
+}
+
+.side-menu {
+  background: orangered;
+  grid-area: side-menu;
+}
+
+.tags {
+  background: brown;
+  grid-area: tags;
+}
+
+.recent {
+  background: black;
+  color: white;
+  grid-area: recent;
+}
+
+.main {
+  background: red;
+  grid-area: main;
+}
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.main > div {
+  padding: 4rem;
+  background: grey;
+  margin: 5px;
+  flex: 1;
+}
+
+.footer {
+  background: purple;
+  grid-area: footer;
+}
+
+/* MEDIA QUERY */
+/* IPAD */
+@media (max-width: 768px) {
+  .wrapper {
+    /* background: red; */
+    /* min-height: 80vh; */
+
+    /* grid(parent of all the item) */
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: auto;
+
+    grid-template-areas:
+      "header header"
+      "title title"
+      "banner banner"
+      "banner banner"
+      "box1 box2"
+      "main main"
+      "side-menu tags"
+      "recent recent"
+      "footer footer";
+  }
+}
+@media (max-width: 567px) {
+  .wrapper {
+    /* background: red; */
+    /* min-height: 80vh; */
+
+    /* grid(parent of all the item) */
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: auto;
+
+    grid-template-areas:
+      "header"
+      "title"
+      "banner"
+      "box1"
+      "box2"
+      "main"
+      "side-menu"
+      "tags"
+      "recent"
+      "footer";
+  }
+}
